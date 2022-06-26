@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
                 if (ActivityCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT)
                         != PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(context, device.getName() + "\n" + device.getAddress(), Toast.LENGTH_SHORT).show();
-                    //devices.add(device);
                     device.createBond();
                 }
             } else
